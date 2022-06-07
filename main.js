@@ -1,0 +1,54 @@
+let navMenu = document.querySelector(".nav-menu");
+let btnMenu = document.querySelector(".menu-btn");
+let li1 = document.querySelector(".a1");
+let li2 = document.querySelector(".a2");
+let li3 = document.querySelector(".a3");
+let li4 = document.querySelector(".a4");
+let divConejos = document.querySelector(".conejos");
+let divAccesorios = document.querySelector(".accesorios");
+let divAcerca = document.querySelector(".acerca-banner-three");
+let divContacto = document.querySelector(".social");
+let h1 = document.querySelector(".h1-logo");
+let linkContacto = document.querySelectorAll(".link-contacto");
+
+btnMenu.addEventListener("click", () => {
+    if (navMenu.className === "nav-menu") {
+        navMenu.classList.add("show");
+} else {
+navMenu.classList.remove("show");
+    };
+});
+
+h1.addEventListener("click", () => {
+    scrollTo(0, 0);
+});
+
+li1.addEventListener("click", () => {
+navMenu.classList.remove("show");
+    divConejos.scrollIntoView({
+        behavior: "smooth", block: "start"
+    });
+});
+
+li2.addEventListener("click", () => {
+    navMenu.classList.remove("show");
+    divAccesorios.scrollIntoView({
+        behavior: "smooth", block: "start"
+    });
+});
+
+li3.addEventListener("click", () => {
+    navMenu.classList.remove("show");
+    divAcerca.scrollIntoView({
+        behavior: "smooth", block: "start"
+    });
+});
+
+linkContacto.forEach(enlace => {enlace.addEventListener("click", () => {
+    divContacto.scrollIntoView({
+        behavior: "smooth", block: "start"
+    });
+})
+});
+
+
