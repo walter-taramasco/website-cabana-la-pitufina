@@ -4,10 +4,10 @@ let li1 = document.querySelector(".a1");
 let li2 = document.querySelector(".a2");
 let li3 = document.querySelector(".a3");
 let li4 = document.querySelector(".a4");
-let divConejos = document.querySelector(".conejos");
-let divAccesorios = document.querySelector(".accesorios");
+let divConejos = document.getElementById("Conejos Disponibles");
+let divAccesorios = document.getElementById("Accesorios");
 let divAcerca = document.querySelector(".acerca-banner-three");
-let divContacto = document.querySelector(".social");
+let divContacto = document.querySelector(".links");
 let h1 = document.querySelector(".h1-logo");
 let linkContacto = document.querySelectorAll(".link-contacto");
 
@@ -40,6 +40,13 @@ li2.addEventListener("click", () => {
 li3.addEventListener("click", () => {
     navMenu.classList.remove("show");
     divAcerca.scrollIntoView({
+        behavior: "smooth", block: "center"
+    });
+});
+
+li4.addEventListener("click", () => {
+    navMenu.classList.remove("show");
+    divContacto.scrollIntoView({
         behavior: "smooth", block: "start"
     });
 });
