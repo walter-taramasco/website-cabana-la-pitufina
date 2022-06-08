@@ -9,7 +9,8 @@ let divAccesorios = document.getElementById("Accesorios");
 let divAcerca = document.querySelector(".acerca-banner-three");
 let divContacto = document.querySelector(".links");
 let h1 = document.querySelector(".h1-logo");
-let linkContacto = document.querySelectorAll(".link-contacto");
+let linkContacto = document.querySelectorAll(".contacto-items");
+let linkContacto2 = document.querySelectorAll(".accesorios-items");
 
 btnMenu.addEventListener("click", () => {
     if (navMenu.className === "nav-menu") {
@@ -58,4 +59,12 @@ linkContacto.forEach(enlace => {enlace.addEventListener("click", () => {
 })
 });
 
+linkContacto2.forEach(enlace1 => {
+enlace1.addEventListener("click", () => {
+console.log("Hola")
+        divContacto.scrollIntoView({
+            behavior: "smooth", block: "start"
+        });
+    })
+});
 
